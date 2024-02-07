@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="und">
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700" />
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      div {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+      }
+      span {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+      }
+      p {
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+      }
+      :root {
+        --color-whitesmoke-1ec012da: rgba(245, 246, 250, 1);
+        --color-white: rgba(255, 255, 255, 1);
+        --color-darkslategrey-549ec0f4: rgba(38, 39, 48, 1);
+        --color-royalblue-79490f9e: rgba(60, 120, 216, 1);
+        --color-cornflowerblue-3d561841: rgba(122, 139, 255, 1);
+        --color-aliceblue-9cb7d7d8: rgba(236, 242, 251, 1);
+        --color-darkslategrey-fdb91b4e: rgba(53, 55, 68, 1);
+        --color-lavender-9c1380c7: rgba(236, 236, 245, 1);
+        --color-royalblue-8fa65630: rgba(60, 120, 216, 0.5);
+        --color-sandybrown-38ec9855: rgba(253, 161, 82, 1);
+        --color-mediumseagreen-e77fed65: rgba(54, 172, 101, 1);
+        --color-lavender-35dd3900: rgba(235, 235, 236, 1);
+        --color-dimgrey-4e7f4906: rgba(93, 95, 105, 1);
+        --color-powderblue-b565630a: rgba(195, 213, 243, 1);
+        --color-silver-9898b62d: rgba(177, 223, 195, 1);
+        --color-bisque-b57138be: rgba(254, 226, 201, 1);
+        --font-size-32: 32px;
+        --font-size-16: 16px;
+        --font-size-20: 20px;
+        --font-size-18: 18px;
+        --font-size-24: 24px;
+        --font-size-14: 14px;
+        --font-size-12: 12px;
+        --font-weight-700: 700;
+        --font-weight-600: 600;
+        --font-weight-400: 400;
+        --border-radius-50: 50px;
+        --border-radius-0: 0px;
+        --border-radius-16: 16px;
+        --border-radius-60: 60px;
+        --border-radius-2: 2px;
+      }
+
+      .dashboard-layout {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 1440px;
+        padding-top: 24px;
+        padding-bottom: 80px;
+      }
+      .dashboard-container {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 48px;
+        padding-bottom: 350px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-0) var(--border-radius-16) var(--border-radius-16) var(--border-radius-0);
+      }
+      .dashboard-container2 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+      }
+      .dashboard-container1 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: 48px;
+        padding-right: 48px;
+        padding-left: 8px;
+        background: var(--color-aliceblue-9cb7d7d8);
+        border-left: 4px solid #3c78d8;
+      }
+      .svg-container {
+        display: flex;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        color: var(--color-royalblue-79490f9e);
+      }
+      .dashboard-title {
+        flex: ;
+        margin-left: px;
+        font: var(--font-weight-700) var(--font-size-20) Nunito Sans;
+        color: var(--color-royalblue-79490f9e);
+        white-space: pre-wrap;
+      }
+      .section-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 38px;
+        align-items: stretch;
+        justify-content: center;
+        padding-right: 48px;
+        padding-left: 10px;
+        margin-top: 7px;
+      }
+      .section-title-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+      }
+      .section-title-container:nth-child(1) {
+        justify-content: flex-start;
+      }
+      .svg-container1 {
+        display: flex;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        color: var(--color-darkslategrey-fdb91b4e);
+      }
+      .section-title-text {
+        flex: 0 0 auto;
+        font: var(--font-weight-400) var(--font-size-18) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .section-title-container:nth-child(2) {
+        justify-content: flex-start;
+      }
+      .section-title-container:nth-child(3) {
+        justify-content: flex-start;
+      }
+      .section-title-container:nth-child(4) {
+        justify-content: flex-start;
+      }
+      .section-title-container:nth-child(5) {
+        justify-content: flex-start;
+      }
+      .section-title-container:nth-child(6) {
+        justify-content: flex-end;
+        margin-right: -22px;
+        margin-left: -22px;
+      }
+      .section-title-container:nth-child(7) {
+        justify-content: flex-start;
+      }
+      .logout-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-right: 24px;
+        padding-left: 48px;
+        margin-top: 279px;
+      }
+      .logout-text {
+        flex: 0 0 auto;
+        margin-left: 8px;
+        font: var(--font-weight-400) var(--font-size-18) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .dashboard-container3 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-left: 24px;
+      }
+      .welcome-message {
+        flex: 0 0 auto;
+        font: var(--font-weight-600) var(--font-size-24) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .user-summary-container3 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 24px;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-top: 23px;
+      }
+      .admin-info-container2 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        height: 120px;
+        padding-right: 40px;
+        padding-left: 40px;
+        background: var(--color-lavender-9c1380c7);
+        border-radius: var(--border-radius-16);
+      }
+      .user-profile {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      .petal-box {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 82px;
+        height: 105px;
+        background: ;
+      }
+      .admin-info-container1 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 5px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-left: 16px;
+      }
+      .admin-info-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+      }
+      .email-container {
+        flex: 0 0 auto;
+        margin-top: 4px;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .email-label {
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+      }
+      .admin-email-text-style {
+        font: var(--font-weight-400) var(--font-size-16) Nunito Sans;
+      }
+      .admin-role-container {
+        flex: 0 0 auto;
+        padding-bottom: 3px;
+      }
+      .vertical-divider {
+        box-sizing: border-box;
+        height: 14px;
+        border-left: 1px solid #a2a3a9;
+      }
+      .admin-role-text {
+        flex: 0 0 auto;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .plan-details-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding-top: 18px;
+        padding-bottom: 17px;
+      }
+      .email-traffic-stats-value-text {
+        flex: 0 0 auto;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .renewal-date-text {
+        flex: 0 0 auto;
+        margin-top: 4px;
+        font: var(--font-weight-400) var(--font-size-14) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .plan-actions {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 8px;
+      }
+      .renew-plan-button {
+        box-sizing: border-box;
+        display: block;
+        flex: 0 0 auto;
+        width: 108px;
+        min-width: 108px;
+        height: 32px;
+        font: var(--font-weight-400) var(--font-size-14) Nunito Sans;
+        color: var(--color-white);
+        cursor: pointer;
+        background: var(--color-royalblue-8fa65630);
+        border: none;
+        border-radius: var(--border-radius-50);
+      }
+      .plan-upgrade-text {
+        flex: 0 0 auto;
+        margin-left: 16px;
+        font: var(--font-weight-600) var(--font-size-14) Nunito Sans;
+        color: var(--color-royalblue-79490f9e);
+        white-space: pre-wrap;
+      }
+      .flex-container-with-stats {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 23px;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 102px;
+      }
+      .container-with-domains {
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 27px;
+        padding-right: 24px;
+        padding-left: 24px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-16);
+      }
+      .domain-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: var(--color-whitesmoke-1ec012da);
+        border-radius: var(--border-radius-60);
+      }
+      .domain-info {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        height: 75px;
+        margin-left: 16px;
+      }
+      .domain-number {
+        flex: 0 0 auto;
+        font: var(--font-weight-600) var(--font-size-18) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .svg-container2 {
+        display: flex;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        color: var(--color-sandybrown-38ec9855);
+      }
+      .license-container1 {
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 24px;
+        padding-left: 24px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-16);
+      }
+      .svg-container3 {
+        display: flex;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        color: var(--color-mediumseagreen-e77fed65);
+      }
+      .license-container {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        height: 75px;
+        margin-left: 16px;
+      }
+      .user-summary {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .email-traffic-stats-container5 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 24px 32px 39px 33px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-16);
+      }
+      .email-traffic-stats-container1 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 8px;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .email-traffic-stats-title {
+        flex: 0 0 auto;
+        padding-bottom: 13px;
+        font: var(--font-weight-600) var(--font-size-20) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .email-traffic-stats-select1 {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        min-width: 162px;
+      }
+      .email-traffic-stats-select {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 67.12%;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .email-traffic-stats-container2 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 32.88%;
+        padding-left: 24px;
+      }
+      .email-traffic-stats-dropdown {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        color: var(--color-darkslategrey-fdb91b4e);
+      }
+      .email-traffic-stats-container3 {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 162px;
+        height: 40px;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: var(--color-whitesmoke-1ec012da);
+        border-radius: 4px;
+      }
+      .email-traffic-stats-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 15px;
+      }
+      .email-traffic-stats-container4 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        padding-top: 24px;
+        padding-bottom: 74px;
+      }
+      .email-traffic-stats-value {
+        padding-right: 10px;
+        margin-top: -3px;
+      }
+      .email-traffic-stats-value-text:first-child {
+        padding-right: 0px;
+        margin-top: 0px;
+      }
+      .email-traffic-stats-value-title {
+        flex: 0 0 auto;
+        padding-right: 10px;
+        margin-top: 10px;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .email-traffic-stats-value-label {
+        flex: 0 0 auto;
+        padding-right: 9px;
+        margin-top: 29px;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .email-stats-container3 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-left: 14px;
+      }
+      .container-with-numbers-and-nested-elements {
+        flex: 0 0 auto;
+      }
+      .container-box {
+        position: relative;
+        box-sizing: border-box;
+        width: 634px;
+        height: 283px;
+        border-right: 1px solid var(--color-lavender-35dd3900);
+        border-bottom: 1px solid var(--color-lavender-35dd3900);
+        border-left: 1px solid var(--color-lavender-35dd3900);
+      }
+      .blue-box {
+        position: absolute;
+        top: 232px;
+        left: 40px;
+        box-sizing: border-box;
+        width: 27px;
+        height: 51px;
+        background: var(--color-royalblue-79490f9e);
+      }
+      .highlighted-text2 {
+        position: absolute;
+        top: 117px;
+        left: 136px;
+        font: var(--font-weight-700) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .blue-box3 {
+        position: absolute;
+        top: 139px;
+        left: 128px;
+        box-sizing: border-box;
+        width: 27px;
+        height: 144px;
+        background: var(--color-royalblue-79490f9e);
+      }
+      .blue-box1 {
+        position: absolute;
+        top: 160px;
+        left: 304px;
+        box-sizing: border-box;
+        width: 27px;
+        height: 123px;
+        background: var(--color-royalblue-79490f9e);
+      }
+      .highlighted-text {
+        position: absolute;
+        top: 35px;
+        left: 400px;
+        font: var(--font-weight-700) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .blue-box2 {
+        position: absolute;
+        top: 57px;
+        left: 392px;
+        box-sizing: border-box;
+        width: 27px;
+        height: 226px;
+        background: var(--color-royalblue-79490f9e);
+      }
+      .highlighted-text1 {
+        position: absolute;
+        top: 57px;
+        left: 576px;
+        font: var(--font-weight-700) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .numeric-container {
+        position: absolute;
+        top: 79px;
+        left: 568px;
+        box-sizing: border-box;
+        width: 27px;
+        height: 204px;
+        background: var(--color-royalblue-79490f9e);
+      }
+      .container-with-border-and-flex {
+        position: absolute;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        border: 1px solid var(--color-lavender-35dd3900);
+      }
+      .row-divider {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 634px;
+        height: 20px;
+        border-bottom: 1px solid #ebebec;
+      }
+      .header-title {
+        box-sizing: border-box;
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        padding-right: 312px;
+        padding-left: 312px;
+        font: var(--font-weight-700) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        border-bottom: 1px solid #ebebec;
+      }
+      .header-text {
+        flex: 0 0 auto;
+        padding-top: 10px;
+        padding-right: 48px;
+        padding-left: 48px;
+        font: var(--font-weight-700) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+        border-bottom: 1px solid #ebebec;
+      }
+      .email-stats-container2 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-right: 27px;
+        padding-left: 29px;
+        margin-top: 8px;
+      }
+      .date-text {
+        flex: 0 0 auto;
+        font: var(--font-weight-400) var(--font-size-12) Nunito Sans;
+        color: var(--color-dimgrey-4e7f4906);
+        white-space: pre-wrap;
+      }
+      .date-paragraph {
+        flex: 0 0 auto;
+        margin-left: 38px;
+        font: var(--font-weight-400) var(--font-size-12) Nunito Sans;
+        color: var(--color-dimgrey-4e7f4906);
+        white-space: pre-wrap;
+      }
+      .incoming-emails-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 32px;
+      }
+      .svg-container4 {
+        display: flex;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+      .email-count-text {
+        flex: 0 0 auto;
+        font: var(--font-weight-400) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .email-stats-container1 {
+        box-sizing: border-box;
+        display: flex;
+        flex: 1 0 226px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: -5px;
+      }
+      .date-and-emails {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 38px;
+        align-items: center;
+        align-self: stretch;
+        justify-content: space-between;
+      }
+      .email-stats-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-top: 32px;
+      }
+      .email-summary {
+        box-sizing: border-box;
+        display: flex;
+        flex: 1 0 164px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin-left: 12px;
+      }
+      .date-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 26px;
+      }
+      .email-counter-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 32px;
+      }
+      .svg-container5 {
+        display: flex;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+      }
+      .total-emails-label {
+        flex: 0 0 auto;
+        margin-left: 8px;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .user-summary-container2 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 24px 43px 24px 24px;
+        margin-left: 24px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-16);
+      }
+      .user-summary-container1 {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        align-self: stretch;
+        justify-content: flex-start;
+      }
+      .user-summary-heading {
+        flex: 0 0 auto;
+        font: var(--font-weight-600) var(--font-size-20) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .user-summary-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 16px;
+      }
+      .active-users-indicator {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 16px;
+        height: 16px;
+        background: var(--color-royalblue-79490f9e);
+        border-radius: var(--border-radius-2);
+      }
+      .active-users-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 16px;
+      }
+      .inactive-users-badge {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 16px;
+        height: 16px;
+        background: var(--color-sandybrown-38ec9855);
+        border-radius: var(--border-radius-2);
+      }
+      .user-summary-image {
+        flex: 0 0 auto;
+        padding-right: 6px;
+        padding-left: 25px;
+        margin-top: 41px;
+      }
+      .image-container {
+        box-sizing: border-box;
+        display: block;
+        width: 222px;
+        max-width: initial;
+        height: 222px;
+      }
+      .user-summary-stats {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 8px;
+        align-items: flex-start;
+        align-self: stretch;
+        justify-content: space-between;
+        padding-left: 20px;
+        margin-top: 61px;
+      }
+      .user-status-text1 {
+        flex: 0 0 auto;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        text-align: center;
+        white-space: pre-wrap;
+      }
+      .user-status-text {
+        font: var(--font-weight-400) var(--font-size-16) Nunito Sans;
+        text-align: center;
+      }
+      .storage-report {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 24px 24px 38px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-16);
+      }
+      .storage-report-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        align-self: center;
+        justify-content: flex-start;
+        padding-right: 87px;
+        padding-left: 88px;
+        margin-top: 54px;
+      }
+      .usage-info-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: initial;
+        height: 166px;
+        padding-top: 63px;
+        padding-bottom: 49px;
+        background: url("assets/div_5642b19a_167_217_3542f4.svg") no-repeat 50% / cover;
+      }
+      .usage-percentage-text {
+        flex: 0 0 auto;
+        font: var(--font-weight-600) var(--font-size-20) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        text-align: center;
+        white-space: pre-wrap;
+      }
+      .usage-info-text {
+        flex: 0 0 auto;
+        margin-top: 34px;
+        font: var(--font-weight-400) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .security-report-container {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        gap: 32px;
+        align-items: stretch;
+        justify-content: center;
+        padding: 24px 24px 47px;
+        margin-left: 24px;
+        background: var(--color-white);
+        border-radius: var(--border-radius-16);
+      }
+      .security-report-summary {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 8px;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .suspicious-logins {
+        flex: 0 0 auto;
+        padding-top: 5px;
+        font: var(--font-weight-600) var(--font-size-16) Nunito Sans;
+        color: var(--color-darkslategrey-fdb91b4e);
+        white-space: pre-wrap;
+      }
+      .mx-domains-info {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin-top: 8px;
+      }
+      .mx-domains-status {
+        display: flex;
+        flex: 0 0 auto;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .mx-status-progress-bar {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 614px;
+        height: 16px;
+        margin-top: 4px;
+        background: var(--color-powderblue-b565630a);
+        border-radius: var(--border-radius-50);
+      }
+      .spf-domains-progress-bar {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 614px;
+        height: 16px;
+        margin-top: 4px;
+        background: var(--color-silver-9898b62d);
+        border-radius: var(--border-radius-50);
+      }
+      .dkim-status-progress-bar {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: 614px;
+        height: 16px;
+        margin-top: 4px;
+        background: var(--color-bisque-b57138be);
+        border-radius: var(--border-radius-50);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: inline-block; width: 1440px; height: 1292px; background: #f5f6fa" data-ignore="used only for top most containter width">
+      <div class="dashboard-layout">
+        <div class="dashboard-container">
+          <div class="dashboard-container2">
+            <div class="dashboard-container1">
+              <div class="svg-container">
+                <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <clipPath id="clip10_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                  </defs>
+                  <g id="dashboard icon" data-node-id="153:173" clip-path="url(#clip10_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_12" data-node-id="I153:173;153:166" d="M3,13h8v-10h-8zM3,21h8v-6h-8zM13,21h8v-10h-8zM13,3v6h8v-6z" fill="currentColor" /></g>
+                </svg>
+              </div>
+              <p class="dashboard-title">Dashboard</p>
+            </div>
+            <div class="section-container">
+              <!-- Repeated elements detected. These are rendered using loops & conditions in the React tab -->
+              <div class="section-title-container section-title-container:nth-child(1)">
+                <div class="svg-container1">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip11_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                    </defs>
+                    <g id="domain icon_2" data-node-id="154:190" clip-path="url(#clip11_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_13" data-node-id="I154:190;153:180" d="M12,22c-5.523,0 -10,-4.477 -10,-10c0,-5.523 4.477,-10 10,-10c5.523,0 10,4.477 10,10c0,5.523 -4.477,10 -10,10zM9.71,19.667c-0.9866,-2.093 -1.5581,-4.357 -1.683,-6.667h-3.965c0.1946,1.539 0.8319,2.988 1.8346,4.172c1.0026,1.183 2.3274,2.05 3.8134,2.495zM10.03,13c0.151,2.439 0.848,4.73 1.97,6.752c1.1523,-2.075 1.8254,-4.383 1.97,-6.752zM19.938,13h-3.965c-0.1249,2.31 -0.6964,4.574 -1.683,6.667c1.486,-0.445 2.8108,-1.312 3.8134,-2.495c1.0027,-1.184 1.64,-2.633 1.8346,-4.172zM4.062,11h3.965c0.1249,-2.31 0.6964,-4.574 1.683,-6.667c-1.486,0.445 -2.8108,1.312 -3.8134,2.495c-1.0027,1.184 -1.64,2.633 -1.8346,4.172zM10.031,11h3.938c-0.1442,-2.369 -0.817,-4.676 -1.969,-6.752c-1.1523,2.075 -1.8254,4.383 -1.97,6.752zM14.29,4.333c0.9866,2.093 1.5581,4.357 1.683,6.667h3.965c-0.1946,-1.539 -0.8319,-2.988 -1.8346,-4.172c-1.0026,-1.183 -2.3274,-2.05 -3.8134,-2.495z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text" style="margin-left: 8px">Domains</p>
+              </div>
+              <div class="section-title-container section-title-container:nth-child(2)">
+                <div class="svg-container1">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip12_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0.5)" /></clipPath>
+                    </defs>
+                    <g id="user icon_2" data-node-id="154:205" clip-path="url(#clip12_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_14" data-node-id="I154:205;154:195" d="M4,22.5c0,-2.122 0.8429,-4.157 2.3431,-5.657c1.5003,-1.5 3.5352,-2.343 5.6569,-2.343c2.1217,0 4.1566,0.843 5.6569,2.343c1.5002,1.5 2.3431,3.535 2.3431,5.657h-2c0,-1.591 -0.6321,-3.117 -1.7574,-4.243c-1.1252,-1.125 -2.6513,-1.757 -4.2426,-1.757c-1.5913,0 -3.1174,0.632 -4.2426,1.757c-1.1253,1.126 -1.7574,2.652 -1.7574,4.243zM12,13.5c-3.315,0 -6,-2.685 -6,-6c0,-3.315 2.685,-6 6,-6c3.315,0 6,2.685 6,6c0,3.315 -2.685,6 -6,6zM12,11.5c2.21,0 4,-1.79 4,-4c0,-2.21 -1.79,-4 -4,-4c-2.21,0 -4,1.79 -4,4c0,2.21 1.79,4 4,4z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text" style="margin-left: 8px">Users</p>
+              </div>
+              <div class="section-title-container section-title-container:nth-child(3)">
+                <div class="svg-container1">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip13_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                    </defs>
+                    <g id="organization icon" data-node-id="156:223" clip-path="url(#clip13_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_15" data-node-id="I156:223;156:210" d="M21,19h2v2h-22v-2h2v-15c0,-0.265 0.1054,-0.52 0.2929,-0.707c0.1875,-0.188 0.4419,-0.293 0.7071,-0.293h10c0.2652,0 0.5196,0.105 0.7071,0.293c0.1875,0.187 0.2929,0.442 0.2929,0.707v15h4v-8h-2v-2h3c0.2652,0 0.5196,0.105 0.7071,0.293c0.1875,0.187 0.2929,0.442 0.2929,0.707zM5,5v14h8v-14zM7,11h4v2h-4zM7,7h4v2h-4z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text" style="margin-left: 8px">Organization</p>
+              </div>
+              <div class="section-title-container section-title-container:nth-child(4)">
+                <div class="svg-container1">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip14_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(-1.0734500000000011, -1)" /></clipPath>
+                    </defs>
+                    <g id="mail settings icon" data-node-id="156:238" clip-path="url(#clip14_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_16" data-node-id="I156:238;156:228" d="M18.92655,6.238l-7.928,7.1l-8.072,-7.122v11.784h10v2h-11c-0.2652,0 -0.5196,-0.105 -0.7071,-0.293c-0.1875,-0.187 -0.2929,-0.442 -0.2929,-0.707v-16c0,-0.265 0.1054,-0.52 0.2929,-0.707c0.1875,-0.188 0.4419,-0.293 0.7071,-0.293h18c0.2652,0 0.5196,0.105 0.7071,0.293c0.1875,0.187 0.2929,0.442 0.2929,0.707v9h-2zM18.42755,4h-14.99l7.55,6.662l7.441,-6.662zM15.97655,18.548c-0.0669,-0.362 -0.0669,-0.734 0,-1.096l-1.014,-0.586l1,-1.732l1.014,0.586c0.278,-0.238 0.599,-0.425 0.95,-0.55v-1.17h2v1.17c0.351,0.125 0.672,0.312 0.95,0.55l1.014,-0.586l1,1.732l-1.014,0.586c0.0669,0.362 0.0669,0.734 0,1.096l1.014,0.586l-1,1.732l-1.014,-0.586c-0.2801,0.24 -0.6022,0.427 -0.95,0.55v1.17h-2v-1.17c-0.3478,-0.123 -0.6699,-0.31 -0.95,-0.55l-1.014,0.586l-1,-1.732zM18.92655,19c0.2652,0 0.5196,-0.105 0.7071,-0.293c0.1875,-0.187 0.2929,-0.442 0.2929,-0.707c0,-0.265 -0.1054,-0.52 -0.2929,-0.707c-0.1875,-0.188 -0.4419,-0.293 -0.7071,-0.293c-0.2652,0 -0.5196,0.105 -0.7071,0.293c-0.1875,0.187 -0.2929,0.442 -0.2929,0.707c0,0.265 0.1054,0.52 0.2929,0.707c0.1875,0.188 0.4419,0.293 0.7071,0.293z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text" style="margin-left: 8px">Mail Settings</p>
+              </div>
+              <div class="section-title-container section-title-container:nth-child(5)">
+                <div class="svg-container1">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip15_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                    </defs>
+                    <g id="account icon" data-node-id="410:6738" clip-path="url(#clip15_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_17" data-node-id="I410:6738;410:6731" d="M12,22c-5.523,0 -10,-4.477 -10,-10c0,-5.523 4.477,-10 10,-10c5.523,0 10,4.477 10,10c0,5.523 -4.477,10 -10,10zM7.013,18.256c1.4155,1.132 3.1747,1.747 4.987,1.744c1.97,0 3.773,-0.712 5.167,-1.892c-0.6513,-0.668 -1.4299,-1.199 -2.29,-1.561c-0.86,-0.362 -1.7839,-0.548 -2.717,-0.547c-0.9674,-0.001 -1.9245,0.199 -2.8105,0.587c-0.8861,0.389 -1.6817,0.957 -2.3365,1.669zM5.616,16.82c0.8405,-0.892 1.8547,-1.602 2.9801,-2.087c1.1255,-0.485 2.3384,-0.735 3.5639,-0.733c1.1817,-0.002 2.352,0.23 3.4437,0.682c1.0918,0.452 2.0836,1.116 2.9183,1.952c0.8561,-1.205 1.3616,-2.623 1.4606,-4.098c0.0989,-1.475 -0.2126,-2.948 -0.9001,-4.257c-0.6875,-1.308 -1.724,-2.4 -2.9945,-3.156c-1.2706,-0.755 -2.7255,-1.143 -4.2034,-1.122c-1.4779,0.022 -2.9209,0.452 -4.1691,1.244c-1.2481,0.791 -2.2525,1.913 -2.9018,3.241c-0.6493,1.328 -0.918,2.81 -0.7764,4.281c0.1416,1.471 0.6881,2.874 1.5787,4.054zM12,13c-1.0609,0 -2.0783,-0.421 -2.8284,-1.172c-0.7502,-0.75 -1.1716,-1.767 -1.1716,-2.828c0,-1.061 0.4214,-2.078 1.1716,-2.828c0.7501,-0.751 1.7675,-1.172 2.8284,-1.172c1.0609,0 2.0783,0.421 2.8284,1.172c0.7502,0.75 1.1716,1.767 1.1716,2.828c0,1.061 -0.4214,2.078 -1.1716,2.828c-0.7501,0.751 -1.7675,1.172 -2.8284,1.172zM12,11c0.5304,0 1.0391,-0.211 1.4142,-0.586c0.3751,-0.375 0.5858,-0.884 0.5858,-1.414c0,-0.53 -0.2107,-1.039 -0.5858,-1.414c-0.3751,-0.375 -0.8838,-0.586 -1.4142,-0.586c-0.5304,0 -1.0391,0.211 -1.4142,0.586c-0.3751,0.375 -0.5858,0.884 -0.5858,1.414c0,0.53 0.2107,1.039 0.5858,1.414c0.3751,0.375 0.8838,0.586 1.4142,0.586z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text" style="margin-left: 8px">Account</p>
+              </div>
+              <div class="section-title-container section-title-container:nth-child(6)">
+                <div class="svg-container1" style="margin-right: 8px">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip16_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, -0.04435000000000855)" /></clipPath>
+                    </defs>
+                    <g id="security icon" data-node-id="157:253" clip-path="url(#clip16_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_18" data-node-id="I157:253;156:243" d="M12,0.95565l8.217,1.826c0.457,0.102 0.783,0.507 0.783,0.976v9.987c0,2.006 -1.003,3.88 -2.672,4.992l-6.328,4.219l-6.328,-4.219c-1.67,-1.113 -2.672,-2.986 -2.672,-4.991v-9.988c0,-0.469 0.326,-0.874 0.783,-0.976zM12,3.00465l-7,1.555v9.185c0,1.337 0.668,2.586 1.781,3.328l5.219,3.48l5.219,-3.48c1.113,-0.742 1.781,-1.99 1.781,-3.327v-9.186l-7,-1.554zM16.452,8.17765l1.415,1.414l-6.364,6.364l-4.243,-4.243l1.414,-1.414l2.828,2.828l4.95,-4.95z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text">Security &amp; Compliance</p>
+              </div>
+              <div class="section-title-container section-title-container:nth-child(7)">
+                <div class="svg-container1">
+                  <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="clip17_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                    </defs>
+                    <g id="subscriptio icon" data-node-id="161:268" clip-path="url(#clip17_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_19" data-node-id="I161:268;161:258" d="M3,3h18c0.2652,0 0.5196,0.105 0.7071,0.293c0.1875,0.187 0.2929,0.442 0.2929,0.707v16c0,0.265 -0.1054,0.52 -0.2929,0.707c-0.1875,0.188 -0.4419,0.293 -0.7071,0.293h-18c-0.2652,0 -0.5196,-0.105 -0.7071,-0.293c-0.1875,-0.187 -0.2929,-0.442 -0.2929,-0.707v-16c0,-0.265 0.1054,-0.52 0.2929,-0.707c0.1875,-0.188 0.4419,-0.293 0.7071,-0.293zM4,5v14h16v-14zM8.5,14h5.5c0.1326,0 0.2598,-0.053 0.3536,-0.146c0.0937,-0.094 0.1464,-0.221 0.1464,-0.354c0,-0.133 -0.0527,-0.26 -0.1464,-0.354c-0.0938,-0.093 -0.221,-0.146 -0.3536,-0.146h-4c-0.663,0 -1.2989,-0.263 -1.7678,-0.732c-0.4688,-0.469 -0.7322,-1.105 -0.7322,-1.768c0,-0.663 0.2634,-1.299 0.7322,-1.768c0.4689,-0.469 1.1048,-0.732 1.7678,-0.732h1v-2h2v2h2.5v2h-5.5c-0.1326,0 -0.2598,0.053 -0.3536,0.146c-0.0937,0.094 -0.1464,0.221 -0.1464,0.354c0,0.133 0.0527,0.26 0.1464,0.354c0.0938,0.093 0.221,0.146 0.3536,0.146h4c0.663,0 1.2989,0.263 1.7678,0.732c0.4688,0.469 0.7322,1.105 0.7322,1.768c0,0.663 -0.2634,1.299 -0.7322,1.768c-0.4689,0.469 -1.1048,0.732 -1.7678,0.732h-1v2h-2v-2h-2.5z" fill="currentColor" /></g>
+                  </svg>
+                </div>
+                <p class="section-title-text" style="margin-left: 8px">Subscription</p>
+              </div>
+            </div>
+          </div>
+          <div class="logout-container">
+            <div class="svg-container1">
+              <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <clipPath id="clip18_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(1.1502000000000052, 0)" /></clipPath>
+                </defs>
+                <g id="Frame_6" data-node-id="163:279" clip-path="url(#clip18_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_20" data-node-id="163:281" d="M6.1502,11h8v2h-8v3l-5,-4l5,-4zM5.1502,18h2.708c1.1547,1.018 2.5787,1.682 4.1011,1.911c1.5225,0.229 3.0787,0.014 4.4819,-0.619c1.4032,-0.634 2.5939,-1.659 3.4291,-2.952c0.8352,-1.294 1.2794,-2.8 1.2794,-4.34c0,-1.54 -0.4442,-3.046 -1.2794,-4.34c-0.8352,-1.293 -2.0259,-2.318 -3.4291,-2.951c-1.4032,-0.634 -2.9594,-0.849 -4.4819,-0.62c-1.5224,0.229 -2.9464,0.893 -4.1011,1.911h-2.708c0.9307,-1.243 2.1383,-2.251 3.5271,-2.946c1.3887,-0.694 2.9202,-1.055 4.4729,-1.054c5.523,0 10,4.477 10,10c0,5.523 -4.477,10 -10,10c-1.5527,0.001 -3.0842,-0.36 -4.4729,-1.054c-1.3888,-0.695 -2.5964,-1.703 -3.5271,-2.946z" fill="currentColor" /></g>
+              </svg>
+            </div>
+            <p class="logout-text">Logout</p>
+          </div>
+        </div>
+        <div class="dashboard-container3">
+          <p class="welcome-message">Dashboard</p>
+          <div class="user-summary-container3">
+            <div class="admin-info-container2">
+              <div class="user-profile">
+                <div class="petal-box"></div>
+                <div class="admin-info-container1">
+                  <div class="admin-info-container">
+                    <p class="welcome-message">Welcome Jane Palley</p>
+                    <p class="email-container"><span class="email-label">Email:</span><span class="admin-email-text-style"> admin@palleypetals.com</span></p>
+                  </div>
+                  <div class="admin-role-container">
+                    <div class="vertical-divider"></div>
+                  </div>
+                  <p class="admin-role-text"><span class="email-label">Role:</span><span class="admin-email-text-style"> Super Admin</span></p>
+                </div>
+              </div>
+              <div class="plan-details-container">
+                <p class="email-traffic-stats-value-text">Plan: Starter Plan</p>
+                <p class="renewal-date-text">Renewal Date: Dec 23, 2023</p>
+                <div class="plan-actions">
+                  <!-- PLACEHOLDER - Button Component detected here. Go to "React Code" via right click menu to see code generated -->
+                  <p class="plan-upgrade-text">Upgrade Plan</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-container-with-stats">
+              <div class="container-with-domains">
+                <div class="domain-container">
+                  <div class="svg-container">
+                    <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <clipPath id="clip3_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                      </defs>
+                      <g id="domain icon" data-node-id="163:302" clip-path="url(#clip3_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_4" data-node-id="I163:302;153:180" d="M12,22c-5.523,0 -10,-4.477 -10,-10c0,-5.523 4.477,-10 10,-10c5.523,0 10,4.477 10,10c0,5.523 -4.477,10 -10,10zM9.71,19.667c-0.987,-2.093 -1.558,-4.357 -1.683,-6.667h-3.965c0.195,1.539 0.832,2.988 1.835,4.172c1.002,1.183 2.327,2.05 3.813,2.495zM10.03,13c0.151,2.439 0.848,4.73 1.97,6.752c1.152,-2.075 1.825,-4.383 1.97,-6.752zM19.938,13h-3.965c-0.125,2.31 -0.696,4.574 -1.683,6.667c1.486,-0.445 2.811,-1.312 3.813,-2.495c1.003,-1.184 1.64,-2.633 1.835,-4.172zM4.062,11h3.965c0.125,-2.31 0.696,-4.574 1.683,-6.667c-1.486,0.445 -2.811,1.312 -3.813,2.495c-1.003,1.184 -1.64,2.633 -1.835,4.172zM10.031,11h3.938c-0.144,-2.369 -0.817,-4.676 -1.969,-6.752c-1.152,2.075 -1.825,4.383 -1.97,6.752zM14.29,4.333c0.987,2.093 1.558,4.357 1.683,6.667h3.965c-0.195,-1.539 -0.832,-2.988 -1.835,-4.172c-1.002,-1.183 -2.327,-2.05 -3.813,-2.495z" fill="currentColor" /></g>
+                    </svg>
+                  </div>
+                </div>
+                <div class="domain-info">
+                  <p class="section-title-text">Domains</p>
+                  <p class="domain-number">1</p>
+                </div>
+              </div>
+              <div class="container-with-domains">
+                <div class="domain-container">
+                  <div class="svg-container2">
+                    <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <clipPath id="clip4_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0.5)" /></clipPath>
+                      </defs>
+                      <g id="user icon" data-node-id="163:326" clip-path="url(#clip4_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_5" data-node-id="I163:326;154:195" d="M4,22.5c0,-2.122 0.843,-4.157 2.343,-5.657c1.5,-1.5 3.535,-2.343 5.657,-2.343c2.122,0 4.157,0.843 5.657,2.343c1.5,1.5 2.343,3.535 2.343,5.657h-2c0,-1.591 -0.632,-3.117 -1.757,-4.243c-1.126,-1.125 -2.652,-1.757 -4.243,-1.757c-1.591,0 -3.117,0.632 -4.243,1.757c-1.125,1.126 -1.757,2.652 -1.757,4.243zM12,13.5c-3.315,0 -6,-2.685 -6,-6c0,-3.315 2.685,-6 6,-6c3.315,0 6,2.685 6,6c0,3.315 -2.685,6 -6,6zM12,11.5c2.21,0 4,-1.79 4,-4c0,-2.21 -1.79,-4 -4,-4c-2.21,0 -4,1.79 -4,4c0,2.21 1.79,4 4,4z" fill="currentColor" /></g>
+                    </svg>
+                  </div>
+                </div>
+                <div class="domain-info">
+                  <p class="section-title-text">Users</p>
+                  <p class="domain-number">2</p>
+                </div>
+              </div>
+              <div class="license-container1">
+                <div class="domain-container">
+                  <div class="svg-container3">
+                    <svg viewBox="0 0 24 24" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <clipPath id="clip5_145_1367" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="white" transform="translate(0, 0)" /></clipPath>
+                      </defs>
+                      <g id="Frame_4" data-node-id="163:330" clip-path="url(#clip5_145_1367)" xmlns="http://www.w3.org/2000/svg"><path id="Vector_6" data-node-id="163:332" d="M2,3.993c0,-0.263 0.11,-0.514 0.29,-0.7c0.19,-0.186 0.44,-0.291 0.7,-0.293h18.02c0.55,0 0.99,0.445 0.99,0.993v16.014c0,0.263 -0.11,0.514 -0.29,0.7c-0.19,0.186 -0.44,0.291 -0.7,0.293h-18.02c-0.26,0 -0.51,-0.105 -0.7,-0.291c-0.19,-0.186 -0.29,-0.439 -0.29,-0.702zM4,5v14h16v-14zM6,7h6v6h-6zM8,9v2h2v-2zM6,15h12v2h-12zM14,7h4v2h-4zM14,11h4v2h-4z" fill="currentColor" /></g>
+                    </svg>
+                  </div>
+                </div>
+                <div class="license-container">
+                  <p class="section-title-text">License</p>
+                  <p class="domain-number">10</p>
+                </div>
+              </div>
+            </div>
+            <div class="user-summary">
+              <div class="email-traffic-stats-container5">
+                <div class="email-traffic-stats-container1">
+                  <p class="email-traffic-stats-title">Email Traffic Stats</p>
+                  <!-- PLACEHOLDER - Select Component detected here. Go to "React Code" via right click menu to see code generated -->
+                </div>
+                <div class="email-traffic-stats-container">
+                  <div class="email-traffic-stats-container4">
+                    <div class="admin-info-container">
+                      <!-- Repeated elements detected. These are rendered using loops & conditions in the React tab -->
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value email-traffic-stats-value-text:first-child">10</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">9</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">8</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">7</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">6</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">5</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">4</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">3</p>
+                      <p class="email-traffic-stats-value-text email-traffic-stats-value">2</p>
+                    </div>
+                    <p class="email-traffic-stats-value-title">1</p>
+                    <p class="email-traffic-stats-value-label">0</p>
+                  </div>
+                  <div class="email-stats-container3">
+                    <div class="container-with-numbers-and-nested-elements">
+                      <div class="container-box">
+                        <div class="blue-box"></div>
+                        <p class="highlighted-text2">5</p>
+                        <div class="blue-box3"></div>
+                        <div class="blue-box1"></div>
+                        <p class="highlighted-text">9</p>
+                        <div class="blue-box2"></div>
+                        <p class="highlighted-text1">8</p>
+                        <div class="numeric-container"></div>
+                        <div class="container-with-border-and-flex">
+                          <div class="admin-info-container">
+                            <div class="row-divider"></div>
+                            <div class="row-divider"></div>
+                            <div class="row-divider"></div>
+                          </div>
+                          <div class="admin-info-container">
+                            <div class="row-divider"></div>
+                            <div class="row-divider"></div>
+                            <div class="row-divider"></div>
+                          </div>
+                          <span class="header-title">4</span>
+                          <div class="admin-info-container">
+                            <div class="row-divider"></div>
+                            <div class="row-divider"></div>
+                            <p class="header-text">1</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="email-stats-container2">
+                      <div class="dashboard-container2">
+                        <div class="user-profile">
+                          <p class="date-text">13/12/22</p>
+                          <p class="date-paragraph">13/12/22</p>
+                        </div>
+                        <div class="incoming-emails-container">
+                          <div class="svg-container4">
+                            <svg viewBox="0 0 25 25" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <clipPath id="clip7_145_1367" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="24" height="24" rx="12" fill="white" /></clipPath>
+                              </defs>
+                              <g id="icon" data-node-id="166:498" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip7_145_1367)">
+                                  <rect x="0.5" y="0.5" width="24" height="24" rx="12" fill="#F5F6FA" />
+                                  <path id="Vector_8" data-node-id="166:500" d="M17.643,9.177l-4.908,4.484l-4.997,-4.498v7.442h5.572v1.263h-6.191c-0.164,0 -0.322,-0.066 -0.438,-0.185c-0.116,-0.118 -0.181,-0.279 -0.181,-0.446v-10.105c0,-0.168 0.065,-0.329 0.181,-0.447c0.116,-0.118 0.274,-0.185 0.438,-0.185h11.143c0.164,0 0.322,0.067 0.438,0.185c0.116,0.118 0.181,0.279 0.181,0.447v5.052h-1.238zM17.334,7.763h-9.28l4.674,4.208l4.607,-4.208zM17.643,15.974h1.857l-2.476,2.526l-2.476,-2.526h1.857v-2.527h1.238z" fill="#36AC65" />
+                                </g>
+                              </g>
+                            </svg>
+                          </div>
+                          <p class="email-count-text">Incoming Emails: 18</p>
+                        </div>
+                      </div>
+                      <div class="email-stats-container1">
+                        <div class="date-and-emails">
+                          <p class="date-text">14/12/22</p>
+                          <p class="date-text">15/12/22</p>
+                          <p class="date-text">16/12/22</p>
+                        </div>
+                        <div class="email-stats-container">
+                          <div class="svg-container4">
+                            <svg viewBox="0 0 25 25" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <clipPath id="clip8_145_1367" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="24" height="24" rx="12" fill="white" /></clipPath>
+                              </defs>
+                              <g id="icon_2" data-node-id="167:166" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip8_145_1367)">
+                                  <rect x="0.5" y="0.5" width="24" height="24" rx="12" fill="#F5F6FA" />
+                                  <path id="Vector_9" data-node-id="167:168" d="M17.643,9.177l-4.908,4.484l-4.997,-4.498v7.442h5.572v1.263h-6.191c-0.164,0 -0.322,-0.066 -0.438,-0.185c-0.116,-0.118 -0.181,-0.279 -0.181,-0.446v-10.105c0,-0.168 0.065,-0.329 0.181,-0.447c0.116,-0.118 0.274,-0.185 0.438,-0.185h11.143c0.164,0 0.322,0.067 0.438,0.185c0.116,0.118 0.181,0.279 0.181,0.447v5.052h-1.238zM17.334,7.763h-9.28l4.674,4.208z" fill="#FDA152" />
+                                  <path id="Vector_10" data-node-id="167:169" d="M19.452,15.026h-1.857v2.527h-1.238v-2.527h-1.857l2.476,-2.526z" fill="#FDA152" />
+                                </g>
+                              </g>
+                            </svg>
+                          </div>
+                          <p class="email-count-text">Outgoing Emails: 9</p>
+                        </div>
+                      </div>
+                      <div class="email-summary">
+                        <div class="date-container">
+                          <p class="date-text">17/12/22</p>
+                          <p class="date-text">17/12/22</p>
+                        </div>
+                        <div class="email-counter-container">
+                          <div class="svg-container5">
+                            <svg viewBox="0 0 25 25" x="0" y="0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <clipPath id="clip9_145_1367" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="24" height="24" rx="12" fill="white" /></clipPath>
+                              </defs>
+                              <g id="icon_3" data-node-id="167:180" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip9_145_1367)">
+                                  <rect x="0.5" y="0.5" width="24" height="24" rx="12" fill="#F5F6FA" />
+                                  <path id="Vector_11" data-node-id="167:183" d="M6.167,6.5h12c0.176,0 0.346,0.07 0.471,0.195c0.125,0.125 0.195,0.295 0.195,0.472v10.666c0,0.177 -0.07,0.347 -0.195,0.472c-0.125,0.125 -0.295,0.195 -0.471,0.195h-12c-0.177,0 -0.347,-0.07 -0.472,-0.195c-0.125,-0.125 -0.195,-0.295 -0.195,-0.472v-10.666c0,-0.177 0.07,-0.347 0.195,-0.472c0.125,-0.125 0.295,-0.195 0.472,-0.195zM17.5,9.325l-5.285,4.734l-5.382,-4.748v7.856h10.667zM7.174,7.833l5.033,4.442l4.961,-4.442z" fill="#353744" />
+                                </g>
+                              </g>
+                            </svg>
+                          </div>
+                          <p class="total-emails-label">Total Emails</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="user-summary-container2">
+                <div class="user-summary-container1">
+                  <p class="user-summary-heading">User Summary</p>
+                  <div class="user-summary-container">
+                    <div class="user-profile">
+                      <div class="active-users-indicator"></div>
+                      <p class="total-emails-label">Active users</p>
+                    </div>
+                    <div class="active-users-container">
+                      <div class="inactive-users-badge"></div>
+                      <p class="total-emails-label">Inactive users</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="user-summary-image">
+                  <img src="assets/img_db5e151f_edfa42.svg" class="image-container" />
+                </div>
+                <div class="user-summary-stats">
+                  <p class="user-status-text1">
+                    <span>2 <br /></span><span class="user-status-text">active users</span>
+                  </p>
+                  <p class="user-status-text1">
+                    <span>0 <br /></span><span class="user-status-text">inactive users</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="user-summary">
+              <div class="storage-report">
+                <p class="user-summary-heading">Storage Report</p>
+                <div class="storage-report-container">
+                  <div class="usage-info-container">
+                    <p class="usage-percentage-text">0.8% <br />Used</p>
+                  </div>
+                  <p class="usage-info-text"><span>200MB of&nbsp;&nbsp;</span><span class="email-label">150GB</span><span> used</span></p>
+                </div>
+              </div>
+              <div class="security-report-container">
+                <div class="admin-info-container">
+                  <p class="user-summary-heading">Security Report</p>
+                  <div class="security-report-summary">
+                    <p class="suspicious-logins">Suspicious Logins (Last 7 days)</p>
+                    <p class="user-summary-heading">0</p>
+                  </div>
+                </div>
+                <div class="mx-domains-info">
+                  <div class="mx-domains-status">
+                    <p class="email-traffic-stats-value-text">Domains with MX</p>
+                    <p class="email-traffic-stats-value-text">1/1</p>
+                  </div>
+                  <div class="mx-status-progress-bar"></div>
+                </div>
+                <div class="admin-info-container">
+                  <div class="mx-domains-status">
+                    <p class="email-traffic-stats-value-text">Domains with SPF</p>
+                    <p class="email-traffic-stats-value-text">1/1</p>
+                  </div>
+                  <div class="spf-domains-progress-bar"></div>
+                </div>
+                <div class="admin-info-container">
+                  <div class="mx-domains-status">
+                    <p class="email-traffic-stats-value-text">Domains with DKIM</p>
+                    <p class="email-traffic-stats-value-text">1/1</p>
+                  </div>
+                  <div class="dkim-status-progress-bar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
